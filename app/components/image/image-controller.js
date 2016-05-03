@@ -4,7 +4,5 @@ app.controller('ImageController', function(ImageService){
 		ic.imageData = imageData;
 	})
 	// DO NOT EDIT ABOVE
-	ic.getImage = function () {
-	return ic.imageData.url	
-	}
+
 })
