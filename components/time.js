@@ -5,7 +5,6 @@ app.controller('TimeCtrl', function($scope, $interval){
     
     $scope.clock = Date.now();
     var d = new Date();
-    debugger
     var h = d.getHours();
     if(h < 5 || h > 21)   time.mes = "Good night, Idaho!";
     if(h > 5  && h < 12 ) time.mes = "Good morning, Idaho!";

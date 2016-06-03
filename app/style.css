@@ -19,10 +19,11 @@
 #quotes{
   font-size: 1.5em;
 }
-#quotes ng-show {
+#quotes .ng-hide {
   text-align: right;
   font-style: italic;
 }
+
 #tdsection{
   background-color: darkslategray;
   height: 180px;

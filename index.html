@@ -28,7 +28,7 @@
 		<div class="col-md-10 col-md-offset-1" ng-controller="QuoteController as qc" id="quotes">
 			<div ng-mouseover="showAuthor = true" ng-mouseleave="showAuthor = fasle"> 
 				<p>{{qc.quote.quote}}"</p>
-			<div ng-show="showAuthor">
+			<div ng-show="showAuthor" id="author">
 				<p>Author: {{qc.quote.author}}</p>
 			</div>	
 			</div>
