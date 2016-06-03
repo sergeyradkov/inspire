@@ -10,7 +10,7 @@
 
 <body>
 	<div class="container-fluid" ng-controller="ImageController as ic">
-<!--	<div class="row bg-full" style="background: url({{ic.imageData.url}}) no-repeat; background-size: cover; height: 100%"> -->
+<!--	<div class="row bg-full" style="background: url({{ic.imageData.url}}) no-repeat; background-size: cover; height: 100%">-->
 	<div class="col-md-12" ng-controller="WeatherController as wc" id="weather">
 		<div class="col-md-2 wbox col-md-offset-1">
 			<p class="description">Wind</p>
@@ -33,10 +33,11 @@
 			<p class="data-val">{{wc.humidity}} %</p>
 		</div>
 	</div>
-	<div class="col-md-12 text-center" ng-controller="TimeCtrl as time" id="timer">
+	
+		<div class="col-md-12" ng-controller="TimeCtrl as time" id="timer">
 			<p>{{ clock | date:'HH:mm:ss'}}</p>
 			<p>{{time.mes}}</p>
-	</div>
+		</div>
 	<div class="col-md-12">
 		<div class="col-md-6" ng-controller="QuoteController as qc" id="quotes">
 			<div ng-mouseover="showAuthor = true" ng-mouseleave="showAuthor = fasle"> 
@@ -72,10 +73,10 @@
 
 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
 	<script src="app/init.js"></script>
+	<script src="components/time.js"></script>
 	<script src="components/weather.js"></script>
 	<script src="components/image.js"></script>
 	<script src="components/quote.js"></script>
-	<script src="components/time.js"></script>
 	<script src="components/todo.js"></script>
 
 </body>

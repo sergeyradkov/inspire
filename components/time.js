@@ -1,13 +1,13 @@
 app.controller('TimeCtrl', function($scope, $interval, WeatherService){
   var time = this;
   
-     	WeatherService.getWeather().then(function(weather){
-	    time.city = weather.name;
-	  })
+	WeatherService.getWeather().then(function(weather){
+	time.city = weather.name;
+	debugger
+	})
 
   
   var tick = function() {
-    
     $scope.clock = Date.now();
     var d = new Date();
     var h = d.getHours();
