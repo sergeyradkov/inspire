@@ -4,7 +4,10 @@
   -o-background-size: cover;
   height: 100%;
 }
-
+#weather {
+  height: 20%;
+  text-align: center;
+}
 #timer{
   height: 55%;
   margin-top: 50px;
