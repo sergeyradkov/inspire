@@ -19,8 +19,4 @@ app.controller('TimeCtrl', function($scope, $interval, WeatherService){
   
    tick();
    $interval(tick, 1000);
-   
-   	WeatherService.getWeather().then(function(weather){
-	  wc.weather = weather.name;
-	  })
 });
