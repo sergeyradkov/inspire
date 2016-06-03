@@ -11,7 +11,7 @@ body {
 #weather {
   text-align: center;
   margin-top: 3%;
-  font-size: 20px;
+  font-size: 22px;
 }
 .wbox{
   padding-top: 15px;
@@ -27,10 +27,12 @@ body {
 }
 
 #timer{
-  height: 40%;
-  margin-top: 50px;
+  height: 35%;
+  margin-top: 25px;
   font-size: 6em;
   text-align: center;
+  color: aliceblue;
+  text-shadow: 2px 2px darkgrey;
 }
 
 #author p {
