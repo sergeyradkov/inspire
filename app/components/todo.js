@@ -1,3 +1,17 @@
+app.controller('TodoController', function(TodoService){
+	var tc = this;
+	
+	tc.todos = TodoService.getTodos();
+	
+	tc.addTask = function (newTask) {
+	    TodoService.addTask(newTask);
+		tc.newTask = '';
+	};
+	
+	tc.delTask = function(index){
+		TodoService.deleteTask(index)
+	};
+})
 app.service('TodoService', function($q, $http){
 	var t = localStorage.getItem('todo');
 	var todos;

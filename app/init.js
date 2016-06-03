@@ -1,1 +1,1 @@
-(function() {angular.module('inspire', []);})();
+var app = angular.module('inspire', []);
