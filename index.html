@@ -3,13 +3,14 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Inspire</title>
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+	<link href='https://fonts.googleapis.com/css?family=Maven+Pro' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" href="app/style.css">
 </head>
 
 <body>
 	<div class="container-fluid" ng-controller="ImageController as ic">
-	<div class="row bg-full" style="background: url({{ic.imageData.url}}) no-repeat; background-size: cover; height: 100%">
+<!--	<div class="row bg-full" style="background: url({{ic.imageData.url}}) no-repeat; background-size: cover; height: 100%"> -->
 	<div class="col-md-12" ng-controller="WeatherController as wc" id="weather">
 		<div class="col-md-2 wbox col-md-offset-1">
 			<p class="description">Wind</p>
