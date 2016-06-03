@@ -8,14 +8,20 @@
   height: 20%;
   text-align: center;
 }
+
 #timer{
-  height: 55%;
+  height: 50%;
   margin-top: 50px;
-  font-size: 6em
+  font-size: 6em;
+  text-align: center;
 }
 
 #quotes{
   font-size: 1.5em;
+}
+#quotes ng-show {
+  text-align: right;
+  font-style: italic;
 }
 #tdsection{
   background-color: darkslategray;

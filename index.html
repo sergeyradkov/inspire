@@ -25,11 +25,11 @@
 			<p>{{ clock | date:'HH:mm:ss'}}</p>
 			<p>{{time.mes}}</p>
 		</div>
-		<div class="col-md-12" ng-controller="QuoteController as qc" id="quotes">
+		<div class="col-md-10 col-md-offset-1" ng-controller="QuoteController as qc" id="quotes">
 			<div ng-mouseover="showAuthor = true" ng-mouseleave="showAuthor = fasle"> 
-				<p>{{qc.quote.quote}}" </p>
+				<p>{{qc.quote.quote}}"</p>
 			<div ng-show="showAuthor">
-				<p> Author: {{qc.quote.author}}</p>
+				<p>Author: {{qc.quote.author}}</p>
 			</div>	
 			</div>
 		</div>
