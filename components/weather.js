@@ -25,6 +25,7 @@ app.controller('WeatherController', function(WeatherService){
 	}
 })
 app.service('WeatherService', function($q, $http){
+	
 	this.getWeather =  function(){
 		var w = localStorage.getItem('weather');
 		if(w){

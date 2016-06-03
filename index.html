@@ -3,34 +3,41 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Inspire</title>
-	<link rel="stylesheet" href="app/style.css">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
-
+	<link rel="stylesheet" href="app/style.css">
 </head>
 
 <body>
 	<div class="container-fluid" ng-controller="ImageController as ic">
 	<div class="row bg-full" style="background: url({{ic.imageData.url}}) no-repeat; background-size: cover; height: 100%">
-	
-	<div class="col-md-8">
-		<div class="col-md-12 text-center" ng-controller="WeatherController as wc" id="weather">
-			<div class="col-md-4">
-				<p>Wind {{wc.wind }} meter/sec </p>
-				<p>Pressure {{wc.pressure}} hPa </p>
-			</div>
-			<div class="col-md-4">
-				<h1><a><span ng-click="wc.showTemp()">{{wc.tempShow}}</span></a></h1>
-			</div>
-			<div class="col-md-4">
-				<h1>{{wc.des}}</h1>
-				<h1>{{wc.humidity}} %</h1>
-			</div>
+	<div class="col-md-12" ng-controller="WeatherController as wc" id="weather">
+		<div class="col-md-2 wbox col-md-offset-1">
+			<p class="description">Wind</p>
+			<p class="data-val">{{wc.wind}} m/s</p>
 		</div>
-		<div class="col-md-12" ng-controller="TimeCtrl as time" id="timer">
+		<div class="col-md-2 wbox">
+			<p class="description">Pressure</p>
+			<p class="data-val">{{wc.pressure}} hPa</p>
+		</div>
+		<div class="col-md-2 wbox">
+			<p class="description">Temperature</p>
+			<p><a><span ng-click="wc.showTemp()">{{wc.tempShow}}</span></a></p>
+		</div>
+		<div class="col-md-2 wbox">
+			<p class="description">Clouds</p>
+			<p class="data-val">{{wc.des}}</p>
+		</div>
+		<div class="col-md-2 wbox">
+			<p class="description">Humidity</p>
+			<p class="data-val">{{wc.humidity}} %</p>
+		</div>
+	</div>
+	<div class="col-md-12 text-center" ng-controller="TimeCtrl as time" id="timer">
 			<p>{{ clock | date:'HH:mm:ss'}}</p>
 			<p>{{time.mes}}</p>
-		</div>
-		<div class="col-md-10 col-md-offset-1" ng-controller="QuoteController as qc" id="quotes">
+	</div>
+	<div class="col-md-12">
+		<div class="col-md-6" ng-controller="QuoteController as qc" id="quotes">
 			<div ng-mouseover="showAuthor = true" ng-mouseleave="showAuthor = fasle"> 
 				<p>{{qc.quote.quote}}"</p>
 			<div ng-show="showAuthor" id="author">
@@ -38,8 +45,7 @@
 			</div>	
 			</div>
 		</div>
-	</div>
-	<div class="col-md-4" ng-controller="TodoController as tc">
+		<div class="col-md-6" ng-controller="TodoController as tc">
 				<div id="tdsection">
 		
 			<p>{{tc.todos.length}} case to do today </p>
@@ -57,8 +63,9 @@
 				
 			</div>
 		</div>
-
+	  </div>
 	</div>
+
 </div>
 </div>
 

@@ -5,12 +5,15 @@
   height: 100%;
 }
 #weather {
-  height: 20%;
+  height: 10%;
   text-align: center;
+}
+.wbox{
+  border: 1 px solid white;
 }
 
 #timer{
-  height: 50%;
+  height: 40%;
   margin-top: 50px;
   font-size: 6em;
   text-align: center;
