@@ -1,1 +1,1 @@
-(function() {angular.module('inspire', []);}());
+(function() {angular.module('inspire', []);})();
