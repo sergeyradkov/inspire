@@ -19,7 +19,7 @@
 #quotes{
   font-size: 1.5em;
 }
-#quotes .ng-hide {
+#author p {
   text-align: right;
   font-style: italic;
 }
