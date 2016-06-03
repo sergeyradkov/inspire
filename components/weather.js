@@ -4,7 +4,10 @@ app.controller('WeatherController', function(WeatherService){
 	wc.tempShow = '';
 	
 	WeatherService.getWeather().then(function(weather){
-	wc.weather = weather;
+	wc.wind = weather.wind.speed;
+	wc.pressure = weather.main.pressure;
+	wc.des = weather.weather[0].description;
+	wc.humidity = weather.main.humidity;
 	wc.tempF = Math.round((weather.main.temp * 9)/5 - 459.67);
 	wc.tempC = Math.round(weather.main.temp - 273.15);
 	wc.tempShow = wc.tempF + " F";	

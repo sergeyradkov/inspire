@@ -13,13 +13,18 @@
 	<div class="row bg-full" style="background: url({{ic.imageData.url}}) no-repeat; background-size: cover; height: 100%">
 	
 	<div class="col-md-8">
-		<div class="col-md-12" ng-controller="WeatherController as wc" id="weather">
-				<h4>
-				<img src="http://image005.flaticon.com/156/svg/130/130671.svg" alt="" style="width:20px">
-				<a><span ng-click="wc.showTemp()">{{wc.tempShow}}</span></a>
-				</h4>
-				<h4>{{wc.weather.weather[0].description}}</h4>
-				<h4>{{wc.weather.name}}</h4>	
+		<div class="col-md-12 text-center" ng-controller="WeatherController as wc" id="weather">
+			<div class="col-md-4">
+				<p>Wind {{wc.wind }} meter/sec </p>
+				<p>Pressure {{wc.pressure}} hPa </p>
+			</div>
+			<div class="col-md-4">
+				<h1><a><span ng-click="wc.showTemp()">{{wc.tempShow}}</span></a></h1>
+			</div>
+			<div class="col-md-4">
+				<h1>{{wc.des}}</h1>
+				<h1>{{wc.humidity}} %</h1>
+			</div>
 		</div>
 		<div class="col-md-12" ng-controller="TimeCtrl as time" id="timer">
 			<p>{{ clock | date:'HH:mm:ss'}}</p>
