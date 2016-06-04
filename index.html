@@ -52,27 +52,23 @@
 		</div>
 		
 		<div class="col-md-6" ng-controller="TodoController as tc">
-			<div id="tdsection">
-		
-			<p>{{tc.todos.length}} case to do today </p>
-			
-			<div id="todolist">
-            	<p class="todos" ng-repeat="task in tc.todos track by $index">
-				<a><img src="http://findicons.com/files/icons/573/must_have/48/delete.png" alt="delete" style="width: 15px;" ng-click="tc.delTask($index)"></a> 
-             	{{task}}
-			 </div>
+			<div class="col-sm-12 input-group">
+
+				<input type="text" class="form-control" ng-model="tc.newTask" placeholder="Ads a task for today..">
+				<span class="input-group-btn">
+					<button class="btn btn-success" ng-click="tc.addTask(tc.newTask)" type="button">Add!</button>
+				</span>
+
+			</div>
+				<div class="list-group">
+				<button type="button" ng-repeat="task in tc.todos track by $index" class="list-group-item" ng-click="tc.delTask($index)">{{task}}</button>
+			</div>
 			 
-			 <div>
-				<a><span class="glyphicon glyphicon-plus" aria-hidden="true" ng-click="tc.addTask(tc.newTask)"></span></a>
-				<input type="text" ng-model="tc.newTask" id="tinput">
-			</div>
-			
-			</div>
 	     </div>
 	 </div>
 
-</div>
-</div>
+	 </div>
+	 </div>
 
 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
 	<script src="app/init.js"></script>
