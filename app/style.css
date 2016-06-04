@@ -33,8 +33,14 @@ body {
   color: aliceblue;
   text-shadow: 2px 2px darkgrey;
 }
+#quotes {
+  font-size: 22px;
+  color: aliceblue;
+  text-align: justify;
+  font-family: 'Kaushan Script', cursive;
+}
 
-#author p {
+#author{
   text-align: right;
   font-style: italic;
 }

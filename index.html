@@ -5,12 +5,13 @@
 	<title>Inspire</title>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
 	<link href='https://fonts.googleapis.com/css?family=Maven+Pro' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" href="app/style.css">
 </head>
 
 <body>
 	<div class="container-fluid" ng-controller="ImageController as ic">
-<!--	<div class="row bg-full" style="background: url({{ic.imageData.url}}) no-repeat; background-size: cover; height: 100%">-->
+	<div class="row bg-full" style="background: url({{ic.imageData.url}}) no-repeat; background-size: cover; height: 100%">
 	<div class="col-md-12" ng-controller="WeatherController as wc" id="weather">
 		<div class="col-md-2 wbox col-md-offset-1">
 			<p class="description">Wind</p>
@@ -32,28 +33,30 @@
 			<p class="description">Humidity</p>
 			<p class="data-val">{{wc.humidity}} %</p>
 		</div>
-	</div>
+		</div>
 	
-		<div class="col-md-12" ng-controller="TimeCtrl as time" id="timer">
+	<div class="col-md-12" ng-controller="TimeCtrl as time" id="timer">
 			<p>{{ clock | date:'HH:mm:ss'}}</p>
 			<p>{{time.mes}}</p>
 		</div>
+	
+	
 	<div class="col-md-12">
+		
 		<div class="col-md-6" ng-controller="QuoteController as qc" id="quotes">
-			<div ng-mouseover="showAuthor = true" ng-mouseleave="showAuthor = fasle"> 
-				<p>{{qc.quote.quote}}"</p>
-			<div ng-show="showAuthor" id="author">
-				<p>Author: {{qc.quote.author}}</p>
-			</div>	
+			
+			<div class="col-md-10 col-md-offset-1" ng-mouseover="showAuthor = true" ng-mouseleave="showAuthor = fasle"> 
+				<p>"{{qc.quote.quote}}"</p>
+				<p ng-show="showAuthor" id="author">{{qc.quote.author}}</p>
 			</div>
 		</div>
+		
 		<div class="col-md-6" ng-controller="TodoController as tc">
-				<div id="tdsection">
+			<div id="tdsection">
 		
 			<p>{{tc.todos.length}} case to do today </p>
 			
 			<div id="todolist">
-				
             	<p class="todos" ng-repeat="task in tc.todos track by $index">
 				<a><img src="http://findicons.com/files/icons/573/must_have/48/delete.png" alt="delete" style="width: 15px;" ng-click="tc.delTask($index)"></a> 
              	{{task}}
@@ -62,11 +65,11 @@
 			 <div>
 				<a><span class="glyphicon glyphicon-plus" aria-hidden="true" ng-click="tc.addTask(tc.newTask)"></span></a>
 				<input type="text" ng-model="tc.newTask" id="tinput">
-				
 			</div>
-		</div>
-	  </div>
-	</div>
+			
+			</div>
+	     </div>
+	 </div>
 
 </div>
 </div>
