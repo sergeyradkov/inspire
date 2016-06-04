@@ -59,9 +59,9 @@ body {
 button, select {
     text-transform: inherit;
 }
-.list-group{
+.list-group, qbox{
   overflow-y: scroll;
-  height: 100%;
+  height: 20%;
   border-radius: 5px;
 }
 ::-webkit-scrollbar { 

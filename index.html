@@ -45,7 +45,7 @@
 		
 		<div class="col-md-6" ng-controller="QuoteController as qc" id="quotes">
 			
-			<div class="col-md-10 col-md-offset-1" ng-mouseover="showAuthor = true" ng-mouseleave="showAuthor = fasle"> 
+			<div class="col-md-10 col-md-offset-1 qbox" ng-mouseover="showAuthor = true" ng-mouseleave="showAuthor = fasle"> 
 				<p>"{{qc.quote.quote}}"</p>
 				<p ng-show="showAuthor" id="author">{{qc.quote.author}}</p>
 			</div>
