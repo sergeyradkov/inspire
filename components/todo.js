@@ -4,6 +4,7 @@ app.controller('TodoController', function(TodoService){
 	tc.todos = TodoService.getTodos();
 	
 	tc.addTask = function (newTask) {
+		newTask.deleted = false;
 	    TodoService.addTask(newTask);
 		tc.newTask = '';
 	};
