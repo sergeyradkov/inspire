@@ -61,7 +61,7 @@
 
 			</div>
 				<div class="list-group">
-				<button type="button" ng-repeat="task in tc.todos track by $index" ng-click="tc.delTask(task)" ng-class="{done: task.done}" class="list-group-item" >{{task.task}}</button>
+				<p ng-repeat="task in tc.todos track by $index" ng-click="tc.delTask(task)" ng-class="{done: task.done}" class="list-group-item" >{{task.task}}</p>
 			</div>
 			 
 	     </div>
