@@ -12,7 +12,7 @@ app.controller('TodoController', function(TodoService){
 	tc.delTask = function(task){
 		
 		if(task.done){
-			TodoService.deleteTask(index);
+			TodoService.deleteTask(task);
 		}
 		else {
 			task.done = true;
