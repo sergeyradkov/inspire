@@ -60,7 +60,7 @@ button, select {
     text-transform: inherit;
 }
 .list-group{
-  overflow-y: hidden;
+  overflow: hidden;
   height: 140px;
   border-radius: 5px;
 }
