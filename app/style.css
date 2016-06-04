@@ -27,8 +27,7 @@ body {
 }
 
 #timer{
-  height: 50%;
-  margin-top: 25px;
+  margin: 25px 0;
   font-size: 6em;
   text-align: center;
   color: aliceblue;
