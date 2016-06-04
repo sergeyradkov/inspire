@@ -11,7 +11,6 @@ app.controller('WeatherController', function(WeatherService){
 	wc.tempF = Math.round((weather.main.temp * 9)/5 - 459.67);
 	wc.tempC = Math.round(weather.main.temp - 273.15);
 	wc.tempShow = wc.tempF + " F";	
-	debugger
 	})
 	// DO NOT EDIT ABOVE
 	

@@ -4,13 +4,20 @@ app.controller('TodoController', function(TodoService){
 	tc.todos = TodoService.getTodos();
 	
 	tc.addTask = function (newTask) {
-		newTask.deleted = false;
+		debugger
 	    TodoService.addTask(newTask);
 		tc.newTask = '';
 	};
 	
-	tc.delTask = function(index){
-		TodoService.deleteTask(index)
+	tc.delTask = function(task){
+		
+		if(task.done){
+			TodoService.deleteTask(index);
+		}
+		else {
+			task.done = true;
+		}
+		
 	};
 })
 app.service('TodoService', function($q, $http){
