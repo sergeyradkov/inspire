@@ -60,7 +60,10 @@ button, select {
     text-transform: inherit;
 }
 .list-group{
-  overflow: hidden;
+  overflow-y: scroll;
   height: 140px;
   border-radius: 5px;
+}
+::-webkit-scrollbar { 
+    display: none; 
 }
