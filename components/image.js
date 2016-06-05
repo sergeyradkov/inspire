@@ -6,12 +6,11 @@ app.controller('ImageController', function(ImageService){
 });
 app.service('ImageService', function($http){
 	images = [
-		"https://static.pexels.com/photos/105820/pexels-photo-105820-large.jpeg",
-		// "https://static.pexels.com/photos/105600/pexels-photo-105600-large.jpeg",
-		// "https://static.pexels.com/photos/105607/pexels-photo-105607-large.jpeg"
-		// "https://static.pexels.com/photos/106400/pexels-photo-106400-medium.jpeg",
-		// "https://static.pexels.com/photos/106367/pexels-photo-106367-medium.jpeg",
-		// "https://static.pexels.com/photos/105857/pexels-photo-105857-medium.jpeg"
+		"https://static.pexels.com/photos/92080/pexels-photo-92080.jpeg",
+		"https://static.pexels.com/photos/105600/pexels-photo-105600.jpeg",
+		"https://static.pexels.com/photos/105862/pexels-photo-105862.jpeg",
+		"https://static.pexels.com/photos/106346/pexels-photo-106346.jpeg",
+		"https://static.pexels.com/photos/1079/abstract-blur-green-blurred.jpg"
 	]
 	this.getImage =  function(){
 		// return $http.get('http://www.splashbase.co/api/v1/images/random').then(function(res){
